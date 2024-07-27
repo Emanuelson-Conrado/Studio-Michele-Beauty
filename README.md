@@ -1,1 +1,1 @@
-# Studio-Michele-Beauty
+# Studio.Michele-Beauty
