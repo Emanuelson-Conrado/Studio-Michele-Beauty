@@ -6,25 +6,25 @@
     <title>Studio Michele Beauty</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <script async defer src="https://maps.googleapis.com/maps/api/js?AIzaSyA-EyiConXUqKkWYF9O0GYpuMa5KZ-Sj28&callback=initMap"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA-EyiConXUqKkWYF9O0GYpuMa5KZ-Sj28&callback=initMap"></script>
 </head>
-<body onload="initMap()">
+<body>
     <header>
         <nav class="cabecalho">
             <h1 class="titulo">Studio Michele Beauty</h1>
             <ul class="menu" role="menubar">
                 <li><a href="#servicos" class="info" role="menuitem">Serviços</a></li>
                 <li><a href="#resultados" class="info" role="menuitem">Resultados</a></li>
-                <li><a href="#agendamentos" class="info" role="menuitem">Agendamentos</a></li>
+                <li><a href="#agendamento" class="info" role="menuitem">Agendamentos</a></li>
             </ul>
         </nav>
     </header>
 
     <section id="tratamento" aria-labelledby="tratamento-heading" style="padding: 20px;">
-        <h1 id="tratamento-heading">Tratamento de Estrias e Cicatrizes</h1>
+        <h2 id="tratamento-heading">Tratamento de Estrias e Cicatrizes</h2>
         <p>Recupere a beleza da sua pele com um tratamento especializado para estrias e cicatrizes!</p>
         <div class="imagem">
-            <img src="Antes.jpg" class="img-servico" alt="Antes e Depois">
+            <img src="Antes.jpg" class="img-servico" alt="Foto de antes e depois de um tratamento de estrias.">
         </div>
     </section>
     
@@ -39,6 +39,7 @@
     <section id="resultados" aria-labelledby="resultados-heading">
         <div class="trabalhos">
             <h2 id="resultados-heading">Resultados dos Clientes</h2>
+            <img src="Resultados Microderme/studio.michele_beauty.mp4" class="resultados-microderme">
         </div>
         
     </section>
@@ -55,22 +56,23 @@
                 </div>
                 <div class="form-group">
                     <label for="email">E-mail:</label>
-                    <input type="email" id="email" name="email" required aria-required="true">
+                    <input type="email" id="email" name="email"
+                           pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
+                           title="Por favor, insira um endereço de e-mail válido."
+                           required aria-required="true">
                 </div>
                 <div class="form-group">
                     <label for="phone">Telefone:</label>
-                    <input type="tel" id="phone" name="phone" required aria-required="true">
+                    <input type="tel" id="phone" name="phone"
+                           pattern="[0-9]{2} [0-9]{5}-[0-9]{4}"
+                           title="Por favor, insira um telefone válido no formato XX XXXXX-XXXX."
+                           required aria-required="true">
                 </div>
                 <div class="form-group">
                     <label for="service">Detalhe o Serviço Desejado:</label>
                     <textarea id="service" name="service" rows="4" required aria-required="true"></textarea>
                 </div>
-                <div class="form-group">
-                    <label for="media">Envie Fotos ou Vídeos:</label>
-                    <input type="file" id="media" name="media" accept="image/*, video/*">
-                </div>
                 <button type="submit">Agendar Consulta</button>
-                <input type="hidden" id="whatsapp-message" name="whatsapp-message">
             </form>
         </div>
     </section>
@@ -86,8 +88,8 @@
     <footer>
         <div class="redes">
             <h3>Me siga nas Redes Sociais</h3>
-            <a href="wa.me/5541997486280" target="_blank" class="icones" aria-label="WhatsApp: 41 997265136">
-                <i class="fa-brands fa-whatsapp"> 41 997265136</i>
+            <a href="https://wa.me/5541997486280" target="_blank" class="icones" aria-label="WhatsApp: 55 41 99748-6280">
+                <i class="fa-brands fa-whatsapp"> 55 41 99748-6280</i>
             </a>
             <a href="https://www.instagram.com/studio.michele_beauty/" target="_blank" class="icones" aria-label="Instagram: Studio.Michele-Beauty">
                 <i class="fa-brands fa-instagram" style="color:rgb(77, 164, 123)"> Studio.Michele-Beauty</i>
@@ -99,7 +101,7 @@
         <div class="endereco">
             <h4>Travessa Green Village, 40 - Capela Velha, Araucária - Brasil</h4>
         </div>
-        <p class="rodape">&copy; 2021 Studio Michele Beauty</p>
+        <p class="rodape">© 2021 Studio Michele Beauty</p>
     </footer>
 
     <p style="text-align: center;">
@@ -108,10 +110,9 @@
         </a>
     </p>
 
-    <script src="scripts.js"></script>
+    <script src="main.js"></script>
 
-    <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=AW-16655760832">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-16655760832">
 </script>
 <script>
   window.dataLayer = window.dataLayer || [];
@@ -121,8 +122,7 @@
   gtag('config', 'AW-16655760832');
 </script>
 
-    <!-- Event snippet for Reservar horário conversion page -->
-<script>
+    <script>
   gtag('event', 'conversion', {'send_to': 'AW-16655760832/2INuCKa-jsYZEMD7ioY-'});
 </script>
 
